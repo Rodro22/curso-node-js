@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-/* eslint-disable semi */
+/* eslint-disable semi  */
 
 // argumentos de entrada
 console.log(process.argv);

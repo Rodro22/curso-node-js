@@ -1,6 +1,8 @@
+/* eslint-disable space-before-function-paren */
 /* eslint-disable semi */
 /* eslint-disable quotes */
 /* eslint-disable no-unused-vars */
+
 const net = require("node:net");
 
 function findAvailablePort(desiredPort) {
@@ -16,7 +18,7 @@ function findAvailablePort(desiredPort) {
 
     server.on("error", (err) => {
       if (err.code === "EADDRINUSE") {
-        findAvailablePort(0).then(resolve);
+        findAvailablePort(0).then((port) => resolve(port));
       } else {
         reject(err);
       }

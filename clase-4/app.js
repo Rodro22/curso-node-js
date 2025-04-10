@@ -9,6 +9,7 @@ app.disable("x-powered-by"); // deshabilitar el header X-Powered-By: Express
 
 app.use("/movies", moviesRouter);
 
+// Con esto el hosting nos da el puerto por variable de entorno, si no la tiene usa el 1234
 const PORT = process.env.PORT ?? 1234;
 
 app.listen(PORT, () => {

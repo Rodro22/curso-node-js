@@ -32,7 +32,9 @@ const movieSchema = z.object({
 });
 
 function validateMovie(input) {
+  // Valida todos los campos
   return movieSchema.safeParse(input);
+  // Existe tambien un safeParseAsync para evitar el bloqueo.
 }
 
 function validatePartialMovie(input) {

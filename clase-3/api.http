@@ -3,9 +3,9 @@ GET http://localhost:1234/movies
 
 
 ### Recuperar una movies por id
-GET http://localhost:1234/movies/ccf36f2e-8566-47f7-912d-9f4647250bc7
+GET http://localhost:1234/movies/b32af11a-1624-4720-ab62-9c30dc06d750
 
-### Obtener movies por genero
+### Obtener movies por genero mediante query string
 GET http://localhost:1234/movies?genre=Action
 
 ### Crear una pelicula
@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 
 ### Actualizar una pelicula 
-PATCH http://localhost:1234/movies/ccf36f2e-8566-47f7-912d-9f4647250bc7
+PATCH http://localhost:1234/movies/9603305e-6e3c-42f4-8742-edb5bb5558aa
 Content-Type: application/json
 
 {

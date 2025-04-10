@@ -1,5 +1,8 @@
-## Recuperar info del pokemon ditto
+### Recuperar info del pokemon ditto
 GET http://localhost:1234/pokemon/ditto
+
+### Recuperar info del pokemon pikachu
+GET http://localhost:1234/pokemon/pikachu
 
 ### Crear un pokemon
 POST http://localhost:1234/pokemon

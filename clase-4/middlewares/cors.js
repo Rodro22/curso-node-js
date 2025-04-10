@@ -7,6 +7,7 @@ const ACCEPTED_ORIGINS = [
   "https://midu.dev",
 ];
 
+// Esto es un valor por defecto, por eso estan las llaves vacias
 export const corsMiddlewares = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
   cors({
     origin: (origin, callback) => {

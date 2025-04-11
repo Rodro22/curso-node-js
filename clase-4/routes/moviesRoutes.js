@@ -5,9 +5,9 @@ export const moviesRouter = Router();
 
 moviesRouter.get("/", MovieController.getAll);
 
-moviesRouter.get("/:id", MovieController.getById);
-
 moviesRouter.post("/", MovieController.create);
+
+moviesRouter.get("/:id", MovieController.getById);
 
 moviesRouter.delete("/:id", MovieController.delete);
 

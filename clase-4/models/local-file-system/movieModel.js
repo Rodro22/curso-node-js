@@ -1,3 +1,4 @@
+// Este modelo es para archivos locales
 import { randomUUID } from "node:crypto";
 import { readJSON } from "../../utils.js";
 

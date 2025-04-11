@@ -1,6 +1,6 @@
 // import { MovieModel } from "../models/mysql/movie.js";
 import { Router } from "express";
-import { MovieController } from "../controllers/movies-controller.js";
+import { MovieController } from "../controllers/moviesController.js";
 
 export const createMovieRouter = ({ movieModel }) => {
   const moviesRouter = Router();

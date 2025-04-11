@@ -1,6 +1,6 @@
 //import { MovieModel } from "../models/local-file-system/movie-model.js";
-import { MovieModel } from "../models/mysql/movie.js";
-import { validatePartialMovie } from "../schemas/movies.js";
+import { MovieModel } from "../models/mysql/movieModel.js";
+import { validateMovie, validatePartialMovie } from "../schemas/movieSchema.js";
 
 export class MovieController {
   getAll = async (req, res) => {
@@ -23,7 +23,7 @@ export class MovieController {
       return res.status(400).json({ error: JSON.parse(result.error.message) });
     }
 
-    const newMovie = await validateMovie.create({ input: result.data });
+    const newMovie = await MovieModel.create({ input: result.data });
 
     res.status(201).json(newMovie);
   };

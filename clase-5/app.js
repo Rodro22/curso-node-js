@@ -1,5 +1,5 @@
 import express, { json } from "express"; // require -> commonJS
-import { createMovieRouter } from "./routes/movies-routes.js";
+import { createMovieRouter } from "./routes/moviesRoutes.js";
 import { corsMiddlewares } from "./middlewares/cors.js";
 
 export const createApp = ({ movieModel }) => {

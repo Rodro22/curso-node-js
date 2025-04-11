@@ -1,6 +1,7 @@
 import express, { json } from "express"; // require -> commonJS
 import { createMovieRouter } from "./routes/moviesRoutes.js";
 import { corsMiddlewares } from "./middlewares/cors.js";
+import { MovieModel } from "./models/mysql/movieModel.js";
 
 export const createApp = ({ movieModel }) => {
   const app = express();
@@ -8,6 +9,7 @@ export const createApp = ({ movieModel }) => {
   app.use(corsMiddlewares());
   app.disable("x-powered-by"); // deshabilitar el header X-Powered-By: Express
 
+  // Esta es la inyeccion de dependencias.
   app.use("/movies", createMovieRouter({ movieModel }));
 
   const PORT = process.env.PORT ?? 1234;

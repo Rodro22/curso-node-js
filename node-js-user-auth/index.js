@@ -49,7 +49,7 @@ app.post("/login", async (req, res) => {
     );
 
     res
-      .cookie("acces_token", token, {
+      .cookie("access_token", token, {
         httpOnly: true, // la cookie solo se puede acceder en el servidor
         secure: process.env.NODE_ENV === "production", // la cookie solo se puede acceder en https
         sameSite: "strict", // la cookie solo se puede acceder en el mismo dominio
@@ -78,6 +78,7 @@ app.get("/logout", (req, res) => {
 
 app.get("/protected", (req, res) => {
   const { user } = req.session;
+  console.log(user);
   if (!user) return res.status(403).send("Access not authorized");
   res.render("protected", user);
 });

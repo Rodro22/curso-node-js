@@ -28,6 +28,9 @@ export class UserRepository {
 
     const id = crypto.randomUUID(); // MongoDB genera ids, es mejor dejar eso si se usa mongo
 
+    // Metodo Sincrono
+    // const hashedPassword = bcrypt.hashSync(password, 10)
+
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
 
     User.create({
